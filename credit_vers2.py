@@ -183,3 +183,7 @@ print(class_report_2)
 #the random forest has a higher f1 score coupled with a higher precision while maintaing a relatively high recall value meaning the model
 #is effectively of capturing fraudulent and non-fraudelent cases and the higher precision means that the model cries wolf less. 
 
+conf_matrix2 = confusion_matrix(Y_test, prediction_rf)
+vis2 = ConfusionMatrixDisplay(conf_matrix2)
+vis2.plot()
+plt.show()
